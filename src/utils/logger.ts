@@ -1,5 +1,8 @@
 import { Next, ActionInfo } from 'fnx/lib/core/middleware'
 
+/**
+ * Logger middleware to display actions in the console
+ */
 export function logger (next: Next, action: ActionInfo) {
   const msg = `%cAction%c${[ '[root]', ...action.path ].join('.')}`
   const titleStyle = `background: #f06; padding: 1px 4px; border-radius: 4px 0px 0px 4px; color: #eee;`

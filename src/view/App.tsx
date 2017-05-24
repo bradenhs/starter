@@ -1,4 +1,3 @@
-import * as React from 'react'
 import ReactiveComponent from 'fnx/react'
 import { Counter } from '~/view'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'

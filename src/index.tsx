@@ -1,19 +1,31 @@
+import * as es6Promise from 'es6-promise'
+
+// Polyfill promises globally
+es6Promise.polyfill()
+
 import { normalize } from 'csstips'
-import { cssRaw } from 'typestyle'
-import * as React from 'react'
+import { style } from 'typestyle'
 import * as ReactDOM from 'react-dom'
 import { App } from '~/view'
 import * as injectTapEventPlugin from 'react-tap-event-plugin'
 
-injectTapEventPlugin()
-normalize()
-cssRaw(`
-  body {
-    background: #eee;
-    fontFamily: Roboto;
-  }
-`)
+if (process.env.NODE_ENV !== 'production') {
+  // If in development mode make sure the entire page reloads anytime there is a change. In the
+  // future this can be fine-tuned by just having stateful modules reload the entire page.
+  const { setStatefulModules } = require('fuse-box/modules/fuse-hmr')
+  setStatefulModules(() => true)
+}
 
+// Allows us to capture touch tap events
+injectTapEventPlugin()
+
+// Initial CSS setup
+normalize()
+document.body.className = style({
+  fontFamily: 'Roboto, sans-serif'
+})
+
+// Create a container the application and render our app into it
 const appContainer = document.createElement('div')
 document.body.appendChild(appContainer)
 ReactDOM.render(<App/>, appContainer)

@@ -1,4 +1,3 @@
-import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import ReactiveComponent from 'fnx/react'
 import { state } from '~/state'

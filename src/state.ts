@@ -5,6 +5,6 @@ export const state = new AppModel({
   count: 0
 })
 
-if (MODE === 'development') {
+if (process.env.NODE_ENV !== 'production') {
   state.use(logger)
 }

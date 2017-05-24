@@ -12,6 +12,10 @@ Run the tests:
 
 `yarn test` or `npm test`
 
+Run the linter:
+
+`yarn run lint` or `npm run lint`
+
 Build for production:
 
 `yarn run build` or `npm run build`

@@ -1,1 +1,5 @@
-declare const MODE: 'development' | 'production'
+import * as R from 'react'
+
+declare global {
+  const React: typeof R;
+}

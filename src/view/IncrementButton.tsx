@@ -1,5 +1,4 @@
 import ReactiveComponent from 'fnx/react'
-import * as React from 'react'
 import { counter } from '~/controller'
 import { state } from '~/state'
 import { RaisedButton } from 'material-ui'

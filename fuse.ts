@@ -1,4 +1,8 @@
 import { FuseBox, EnvPlugin, UglifyJSPlugin } from 'fuse-box'
+import { removeSync } from 'fs-extra'
+
+// Clear the fuse box cache folder everytime we start up the dev server again
+removeSync('.fusebox')
 
 const production = process.env.NODE_ENV === 'production'
 
@@ -8,6 +12,7 @@ const productionPlugins = [ ...plugins, UglifyJSPlugin() ]
 const fuse = new FuseBox({
   homeDir: 'src',
   output: 'www/$name.js',
+  sourceMaps: true,
   plugins: production ? productionPlugins : plugins,
   autoImport: {
     React: 'react'

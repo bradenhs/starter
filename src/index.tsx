@@ -1,10 +1,5 @@
-import * as es6Promise from 'es6-promise'
-
-// Polyfill promises globally
-es6Promise.polyfill()
-
 import { normalize } from 'csstips'
-import { style } from 'typestyle'
+import { style } from '~/utils'
 import * as ReactDOM from 'react-dom'
 import { App } from '~/view'
 import * as injectTapEventPlugin from 'react-tap-event-plugin'

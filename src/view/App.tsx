@@ -1,7 +1,7 @@
 import ReactiveComponent from 'fnx/react'
 import { Counter } from '~/view'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import { style } from 'typestyle'
+import { style } from '~/utils'
 import { Paper, Subheader, Divider } from 'material-ui'
 
 const appClassName = style({

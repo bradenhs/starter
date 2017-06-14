@@ -2,7 +2,7 @@ import * as ReactDOM from 'react-dom'
 import ReactiveComponent from 'fnx/react'
 import { state } from '~/state'
 import { IncrementButton } from '~/view'
-import { style } from 'typestyle'
+import { style } from '~/utils'
 
 const countClassName = style({
   fontSize: '80px',

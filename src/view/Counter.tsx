@@ -1,6 +1,5 @@
 import * as ReactDOM from 'react-dom'
-import ReactiveComponent from 'fnx/react'
-import { state } from '~/state'
+import { observer } from 'mobx-react'
 import { IncrementButton } from '~/view'
 import { style } from '~/utils'
 
@@ -14,12 +13,10 @@ const countContainerClassName = style({
   padding: '20px'
 })
 
-export const Counter = ReactiveComponent(() => {
+export const Counter = observer(() => {
   return (
     <div className={countContainerClassName}>
-      <div className={countClassName}>
-        {state.count}
-      </div>
+      <div className={countClassName}>0</div>
       <IncrementButton />
     </div>
   )

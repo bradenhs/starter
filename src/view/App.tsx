@@ -1,4 +1,4 @@
-import ReactiveComponent from 'fnx/react'
+import { observer } from 'mobx-react'
 import { Counter } from '~/view'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import { style } from '~/utils'
@@ -10,7 +10,7 @@ const appClassName = style({
   maxWidth: 'calc(100% - 20px)'
 })
 
-export const App = ReactiveComponent(() => {
+export const App = observer(() => {
   return (
     <MuiThemeProvider>
       <Paper className={appClassName}>

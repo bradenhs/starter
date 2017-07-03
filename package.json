@@ -5,8 +5,7 @@
   "license": "MIT",
   "scripts": {
     "precommit": "./scripts/pre_commit_hook.sh",
-    "format": "prettier --write --no-semi --single-quote --bracket-spacing --braces-spacing --jsx-single-quote --space-before-function-paren \"src/**/*.{ts,tsx}\"",
-    "lint": "tslint -p tsconfig.json --type-check",
+    "format": "prettier --no-semi --single-quote --bracket-spacing --braces-spacing --jsx-single-quote --space-before-function-paren --write \"src/**/*.{ts,tsx}\"",
     "start": "ts-node fuse",
     "build": "NODE_ENV='production' ts-node fuse",
     "test": "jest"
@@ -59,7 +58,6 @@
     "prettier-miscellaneous": "^1.5.2-fix",
     "ts-jest": "^20.0.4",
     "ts-node": "^3.0.4",
-    "tslint": "^5.3.2",
     "typescript": "^2.3.3"
   }
 }

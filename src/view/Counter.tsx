@@ -15,8 +15,12 @@ const countContainerClassName = style({
 })
 
 export const Counter = ReactiveComponent(() => {
-  return <div className={ countContainerClassName }>
-    <div className={ countClassName }>{ state.count }</div>
-    <IncrementButton/>
-  </div>
+  return (
+    <div className={countContainerClassName}>
+      <div className={countClassName}>
+        {state.count}
+      </div>
+      <IncrementButton />
+    </div>
+  )
 })

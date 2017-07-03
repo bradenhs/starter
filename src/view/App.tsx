@@ -11,11 +11,13 @@ const appClassName = style({
 })
 
 export const App = ReactiveComponent(() => {
-  return <MuiThemeProvider>
-    <Paper className={ appClassName }>
-      <Subheader>Counter App</Subheader>
-      <Divider/>
-      <Counter/>
-    </Paper>
-  </MuiThemeProvider>
+  return (
+    <MuiThemeProvider>
+      <Paper className={appClassName}>
+        <Subheader>Counter App</Subheader>
+        <Divider />
+        <Counter />
+      </Paper>
+    </MuiThemeProvider>
+  )
 })

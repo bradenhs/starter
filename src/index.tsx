@@ -23,4 +23,4 @@ document.body.className = style({
 // Create a container the application and render our app into it
 const appContainer = document.createElement('div')
 document.body.appendChild(appContainer)
-ReactDOM.render(<App/>, appContainer)
+ReactDOM.render(<App />, appContainer)

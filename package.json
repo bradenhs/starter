@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "csstips": "^0.2.0",
+    "husky": "^0.14.2",
     "lodash": "^4.17.4",
     "material-ui": "^0.18.5",
     "mobx": "^3.1.16",
@@ -53,7 +54,6 @@
     "@types/react-tap-event-plugin": "^0.0.30",
     "@types/webpack": "^3.0.1",
     "coveralls": "^2.13.1",
-    "husky": "^0.14.2",
     "jest": "^20.0.3",
     "prettier-miscellaneous": "^1.5.2-fix",
     "ts-jest": "^20.0.4",

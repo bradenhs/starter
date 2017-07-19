@@ -1,15 +1,9 @@
 import { normalize } from 'csstips'
-import { style } from '~/utils'
+import { style } from 'typestyle'
+import * as React from 'react'
 import * as ReactDOM from 'react-dom'
-import { App } from '~/view'
 import * as injectTapEventPlugin from 'react-tap-event-plugin'
-
-if (process.env.NODE_ENV !== 'production') {
-  // If in development mode make sure the entire page reloads anytime there is a change. In the
-  // future this can be fine-tuned by just having stateful modules reload the entire page.
-  const { setStatefulModules } = require('fuse-box/modules/fuse-hmr')
-  setStatefulModules(() => true)
-}
+import { App } from '~/view/App'
 
 // Allows us to capture touch tap events
 injectTapEventPlugin()

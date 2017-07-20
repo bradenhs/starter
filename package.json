@@ -4,7 +4,6 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "precommit": "./scripts/pre_commit_hook.sh",
     "format": "prettier --no-semi --single-quote --bracket-spacing --braces-spacing --jsx-single-quote --space-before-function-paren --write \"src/**/*.{ts,tsx}\"",
     "bundle": "webpack",
     "dev": "webpack-dev-server",

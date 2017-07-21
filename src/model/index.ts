@@ -1,4 +1,4 @@
 export * from './TodoDataModel'
-export * from './AppModel'
+export * from './Store'
 export * from './TodoViewModel'
 export * from './TodoCollection'

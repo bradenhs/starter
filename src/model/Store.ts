@@ -1,5 +1,5 @@
 import { TodoCollection } from '~/model'
 
-export class AppModel {
+export class Store {
   todoCollection = new TodoCollection(this)
 }

@@ -5,7 +5,7 @@ import * as ReactDOM from 'react-dom'
 import { Provider, observer } from 'mobx-react'
 import * as injectTapEventPlugin from 'react-tap-event-plugin'
 import { App } from '~/view'
-import { AppModel } from '~/model'
+import { Store } from '~/model'
 
 // Allows us to capture touch tap events
 injectTapEventPlugin()
@@ -20,7 +20,7 @@ document.body.className = style({
 const appContainer = document.createElement('div')
 document.body.appendChild(appContainer)
 ReactDOM.render(
-  <Provider appModel={new AppModel()}>
+  <Provider store={new Store()}>
     <App />
   </Provider>,
   appContainer

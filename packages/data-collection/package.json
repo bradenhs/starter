@@ -1,0 +1,6 @@
+{
+  "name": "@hg/data-collection",
+  "main": "out/index.js",
+  "version": "0.0.0",
+  "private": true
+}

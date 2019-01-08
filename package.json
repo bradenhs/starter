@@ -1,12 +1,57 @@
 {
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
-    "build": "tsc --build"
+    "app": "webpack-dev-server --mode=development",
+    "cypress": "cypress open",
+    "ava": "ava --watch",
+    "start": "concurrently -k -c black.bgGreen,black.bgCyan,black.bgYellow \"npm:app\" \"npm:cypress\" \"npm:ava\"",
+    "build": "ava && webpack --mode=production && cypress run"
+  },
+  "ava": {
+    "compileEnhancements": false,
+    "files": [
+      "src/**/*.spec.ts",
+      "src/**/*.spec.tsx"
+    ],
+    "sources": [
+      "src/**/*.{ts,tsx}"
+    ],
+    "extensions": [
+      "ts",
+      "tsx"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
   },
   "dependencies": {
-    "typescript": "^3.0.0-rc"
+    "ava": "^1.0.1",
+    "csstips": "^0.3.0",
+    "fork-ts-checker-webpack-plugin": "^0.5.2",
+    "mobx": "^5.8.0",
+    "mobx-react-lite": "^0.3.4",
+    "react": "^16.7.0-alpha.2",
+    "react-dom": "^16.7.0-alpha.2",
+    "typestyle": "^2.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "^16.7.18",
+    "@types/react-dom": "^16.0.11",
+    "@types/webpack": "^4.4.22",
+    "@types/webpack-dev-server": "^3.1.1",
+    "concurrently": "^4.1.0",
+    "cypress": "^3.1.4",
+    "cypress-testing-library": "^2.3.5",
+    "fork-ts-checker-notifier-webpack-plugin": "^0.7.0",
+    "prettier": "^1.15.3",
+    "ts-cruftless": "^0.1.2",
+    "ts-loader": "^5.3.3",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.12.0",
+    "tslint-loader": "^3.5.4",
+    "typescript": "^3.2.2",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
   }
 }
